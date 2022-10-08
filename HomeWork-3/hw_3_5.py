@@ -11,6 +11,7 @@ def input_int():
     number = int(input("Введите целое число: ").replace("-", "").replace(",", ".").split(".")[0])
     return number
 
+
 def nega_fibonachi(num: int):
     fib = [0]
     fib1 = fib2 = 1
