@@ -58,7 +58,6 @@ def main():
                 game = True
         player = not player
         count += 1
-        print(f"{count} ")
 
     print(f"Победил {winp} на {count} ходу !")
 
