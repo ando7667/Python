@@ -10,6 +10,7 @@ board = [1, 2, 3,
 
 win = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
 
+
 def draw_board(sz: int = 3):
     print("-" * 13)
     for i in range(sz):
@@ -43,23 +44,27 @@ def main():
     player = True
     game = True
     count = 0
+    draw_board()
     while game:
-        draw_board()
         if player:
             sym = "x"
         else:
             sym = "o"
         player_input(sym)
+        draw_board()
         if count > 3:
             winp = if_win()
             if winp:
                 game = False
             else:
                 game = True
+        if count > 7:
+            print("Ходы закончились! Ничья !" + chr(127927))
+            break
         player = not player
         count += 1
 
-    print(f"Победил {winp} на {count} ходу !")
+    print(f"Победил {winp} на {count} ходу !" + chr(127874))
 
 
 main()
