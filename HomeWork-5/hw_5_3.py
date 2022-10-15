@@ -34,7 +34,6 @@ def player_input(symbol):
 
 
 def if_win():
-    win_pl = ""
     n = [board[x[0]] for x in win if board[x[0]] == board[x[1]] == board[x[2]]]
     return n[0] if n else n
 
