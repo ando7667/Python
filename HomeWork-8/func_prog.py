@@ -65,7 +65,7 @@ def view_all_workers():
           f"{'=' * 30}")
     wk = []
     work = fo.read_scv('worker.csv')
-    shift = fo.read_scv('worker.csv')
+    shift = fo.read_scv('shift.csv')
     for w in work:
         wk = w.replace("\n", "").split(";")
         print(wk)
